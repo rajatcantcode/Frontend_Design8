@@ -1,0 +1,362 @@
+@font-face {
+  font-family: second-text;
+  src: url(/second-text.ttf);
+}
+@font-face {
+  font-family: Mona-Sans;
+  src: url(/Mona-Sans.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+#main {
+  height: 100%;
+  width: 100%;
+  background-color: beige;
+  padding-top: 0.1px;
+}
+#nav {
+  height: 7%;
+  width: 100%;
+  /* background-color: blue; */
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#nav-left {
+  height: 100%;
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#nav-left h4 {
+  font-family: Mona-Sans;
+}
+#nav-center {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+#nav-center img {
+  height: fit-content;
+  width: 200px;
+}
+#nav-center h6 {
+  display: none;
+}
+#nav-right {
+  height: 100%;
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#search {
+  height: 80%;
+  width: 50%;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  padding: 1vw;
+  font-family: Mona-Sans;
+  gap: 10px;
+}
+#log-in {
+  height: 80%;
+  width: 20%;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Mona-Sans;
+}
+#sign-up {
+  height: 80%;
+  width: 20%;
+  background-color: black;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: Mona-Sans;
+}
+#center {
+  height: 50%;
+  width: 100%;
+  padding: 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vw;
+  padding-top: 5vw;
+  margin-bottom: 10px;
+}
+#display {
+  height: fit-content;
+  padding: 0.8vw 1vw;
+  background-color: var(--home-badge-bg, #ffda79);
+  width: fit-content;
+  text-align: center;
+  border-radius: 30px;
+  font-size: 1vw;
+  font-family: second-text;
+  animation: anime 8s infinite;
+}
+
+@keyframes anime {
+  from {
+    background-color: #fedd89;
+  }
+  40% {
+    background-color: pink;
+  }
+  to {
+    background-color: #fddf93;
+  }
+}
+#center > h1 {
+  font-size: 4vw;
+  font-family: second-text;
+  text-align: center;
+  line-height: 4vw;
+  font-weight: 500;
+}
+#center > h2 {
+  font-size: 1.2vw;
+  font-family: second-text;
+}
+#button {
+  height: fit-content;
+  width: fit-content;
+  background-color: black;
+  padding: 1vw;
+  color: white;
+  border-radius: 30px;
+  font-family: Mona-Sans;
+}
+#scroller {
+  height: 42%;
+  width: 100%;
+  /* background-color: red; */
+  padding: 5px;
+  white-space: nowrap;
+  display: flex;
+  overflow: hidden;
+}
+#scroller::-webkit-scrollbar {
+  display: none;
+}
+.auto-scroll {
+  animation: anime2 3s linear infinite;
+  display: flex;
+  align-items: center;
+}
+@keyframes anime2 {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.elem {
+  display: inline-block;
+  position: relative;
+  height: 100%;
+  width: 320px;
+  margin-right: 30px;
+  background-color: royalblue;
+  border-radius: 40px;
+  overflow: hidden;
+}
+.elem img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.elem video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+#page2 {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  padding: 2vw;
+}
+#page2 > h1 {
+  font-family: second-text;
+  text-align: center;
+  font-size: 3vw;
+  margin-bottom: 30px;
+}
+.box {
+  height: 18vw;
+  width: 22vw;
+  background-color: red;
+  border-radius: 15px;
+  display: inline-block;
+  position: relative;
+  transition: all ease 0.5s;
+  overflow: hidden;
+  margin: 15px;
+}
+.box img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.box video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.box-bottom {
+  height: 40%;
+  width: 100%;
+  background: linear-gradient(transparent, rgba(217, 206, 206, 0.63));
+  position: absolute;
+  bottom: -40%;
+  transition: all ease 0.5s;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.box-bottom i {
+  background-color: white;
+  padding: 8px 9px;
+  color: #000;
+  font-size: 19px;
+  font-weight: 600;
+  border-radius: 50%;
+}
+.box-bottom h5 {
+  font-size: 18px;
+}
+.box:hover .box-bottom {
+  font-family: second-text;
+  bottom: 0;
+}
+
+.box:hover {
+  box-shadow: 0px 2px 20px rgba(218, 213, 213, 0.498);
+}
+#buttonexplore {
+  margin-top: 40px;
+  position: absolute;
+  left: 40%;
+  /* transform: translate(50%); */
+  padding: 1.4vw;
+  font-family: Mona-Sans;
+  height: fit-content;
+  width: fit-content;
+  border-radius: 40px;
+  border: 1px solid black;
+}
+#buttonexplore:hover {
+  background-color: bisque;
+}
+@media (max-width: 600px) {
+  #nav {
+    height: 7%;
+    width: 100%;
+    position: relative;
+  }
+  #nav-left {
+    display: none;
+  }
+  #nav-center {
+    width: 100%;
+    height: 70%;
+    display: flex;
+  }
+  #nav-center > h6 {
+    position: absolute;
+    right: 0%;
+    display: initial;
+    padding-right: 10vw;
+  }
+  #nav-center img {
+    position: absolute;
+    height: fit-content;
+    width: 100px;
+    left: 40%;
+  }
+  #nav-right {
+    display: none;
+  }
+  #center {
+    gap: 3.5vw;
+    padding-top: 5vw;
+    margin-bottom: 10px;
+  }
+  #display {
+    font-size: 3.9vw;
+  }
+  #center > h1 {
+    font-size: 10vw;
+    font-family: second-text;
+    text-align: center;
+    line-height: 10vw;
+    font-weight: 500;
+  }
+  #center > h2 {
+    text-align: center;
+    padding: 4vw;
+    font-size: 5vw;
+  }
+  #button {
+    padding: 4vw;
+  }
+  .elem {
+    width: 60vw;
+    margin-right: 20px;
+  }
+  #page2 {
+    padding: 5vw;
+  }
+  #page2 > h1 {
+    font-size: 7vw;
+  }
+  .box {
+    height: 35vw;
+    width: 35vw;
+    background-color: red;
+    border-radius: 15px;
+    display: inline-block;
+    position: relative;
+    transition: all ease 0.5s;
+    overflow: hidden;
+    margin: 15px;
+  }
+  .box-bottom {
+    display: none;
+  }
+  #buttonexplore {
+    position: absolute;
+    left: 25%;
+  }
+  #buttonexplore:hover {
+    background-color: palegoldenrod;
+  }
+}
