@@ -1,10 +1,10 @@
 @font-face {
   font-family: second-text;
-  src: url(/second-text.ttf);
+  src: url(./second-text.ttf);
 }
 @font-face {
   font-family: Mona-Sans;
-  src: url(/Mona-Sans.ttf);
+  src: url(./Mona-Sans.ttf);
 }
 * {
   margin: 0;
